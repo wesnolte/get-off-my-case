@@ -16,7 +16,7 @@ function init() {
 		var user = response;
 
 		// Find cases that belong to the current user
-		client.query("SELECT COUNT() FROM Case WHERE ownerId = '{0}'".replace("{0}",user.id), function(response){
+		client.query("SELECT COUNT() FROM Case WHERE ownerId = '{0}' AND status <> 'Closed'".replace("{0}",user.id), function(response){
 			Tinycon.setBubble(response.totalSize);
 		});			
 	});

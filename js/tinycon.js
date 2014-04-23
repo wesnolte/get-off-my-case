@@ -118,7 +118,7 @@
 		faviconImage.onload = function() {
 
 			// clear canvas
-			context.clearRect(0, 0, 16, 16);
+			//context.clearRect(0, 0, 16, 16);
 
 			// draw original favicon
 			context.drawImage(faviconImage, 0, 0, faviconImage.width, faviconImage.height, 0, 0, 16, 16);
